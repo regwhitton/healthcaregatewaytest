@@ -22,9 +22,7 @@ public class BorderController {
 
     @GetMapping("/borderInfo")
     @ApiOperation(value = "Get a list of countries which use a currency and a list of bordering countries.")
-    @ApiResponses(value = {
-            @ApiResponse(code = 404, message = "Not Found", response = ErrorResponse.class) })
-    @ApiParam(value = "")
+    @ApiResponses(value = { @ApiResponse(code = 404, message = "Not Found", response = ErrorResponse.class) })
     public BorderInfo getBorderInfo(
             @RequestParam(name = "currency") @ApiParam(value = "ISO 4217 currency code", example = "GBP") String currencyCode)
             throws NotFoundException {
